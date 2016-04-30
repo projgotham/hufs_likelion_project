@@ -1,5 +1,20 @@
 Rails.application.routes.draw do
+  get 'resumes/index'
+
+  get 'resumes/new'
+
+  get 'resumes/create'
+
+  get 'resumes/destroy'
+
+  root 'home#index'
+  post 'resumes/index'
+
   get 'home/index'
+
+  resources :resumes, only: [:index, :new, :create, :destroy]
+  
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
