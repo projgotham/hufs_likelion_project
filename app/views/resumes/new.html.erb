@@ -13,9 +13,11 @@
 <div class = "well">
    <%= form_for @resume, html: { multipart: true } do |f| %>
       <%= f.label :name %>
-      <%= f.text_field :name %>
+      <%= f.text_field :name %> <br>
+      <%= "e.g. 한국외대_조민철_1402(핸드폰 뒷번호 4자리)"%> <br><br>
       <%= f.label :attachment %>
       <%= f.file_field :attachment %>
       <%= f.submit "Save", class: "btn btn-primary" %>
+      
    <% end %>
 </div>
