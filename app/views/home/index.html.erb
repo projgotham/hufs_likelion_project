@@ -8,11 +8,12 @@ Created Date: 2016-04-30
         <div class="container-fluid">
             <div class="row">
                 <img src="assets/hufs_likelion_logo_final_small.png" class="logo">
-                <img src="assets/text_logo.png" alt="Omnifood logo" class="logo-small">
+                <img src="assets/text_logo.png" class="logo-small">
                 <ul class="main-nav js--main-nav">
                     <li><a href="#about">About Likelion</a></li>
                     <li><a href="#members">Members</a></li>
-                    <li><a href="#apply">Apply</a></li>
+                    <li><a href="#section-review">Review</a></li>
+                    <li><a href="#section-apply">Apply</a></li>
                 </ul>
                 <a class="mobile-nav-icon js--nav-icon"><span class="glyphicon glyphicon-option-horizontal"
                                                               aria-hidden="true"></span>
@@ -24,17 +25,15 @@ Created Date: 2016-04-30
     <div class="main-text-box">
         <h1>외대 멋쟁이사자차럼</h1>
     </div>
+    <%= link_to '로그인', new_user_session_path %>
 </header>
 
 
-<section class="section-features js--section-features" id="features" style="margin-top: 0px;">
-    <img src="http://crepasnews.com/news/upload/1287384683615.jpg" style="width: 100%;">
-</section>
 <!--
 Created by: Heo Jin
 Created Date: 2016-04-30
 -->
-<section class="section-testimonials">
+<section class="section-testimonials js--section-features">
     <div class="container-fluid">
         <div class="row">
             <h2>외대 X 멋사 4기의 말</h2>
@@ -454,7 +453,7 @@ Created Date: 2016-04-30
 Created by: Cho Min Cheol
 Created Date: 2016-04-30
 -->
-<section class="section-apply">
+<section class="section-apply" id="section-apply">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -471,12 +470,9 @@ Created Date: 2016-04-30
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h4><strong><img src="assets/hufslogo.png"> HUFS x Likelion <img
-                            src="assets/likelion_logo.png"></strong></h4>
-                <ul class="list-unstyled">
-                    <li><a href="mailto:the7mincheol@naver.com">the7mincheol@naver.com</a></li>
-                </ul>
-                <p class="text-muted">Copyright &copy; HUFS x Likelion 2016</p>
+                <img src="assets/text_logo.png" style="height: 20px; width: auto;">
+                Copyright &copy; HUFS x Likelion 2016
+                <a href="mailto:likelion.hufsseoul@gmail.com">likelion.hufsseoul@gmail.com</a></li>
             </div>
         </div>
     </div>
