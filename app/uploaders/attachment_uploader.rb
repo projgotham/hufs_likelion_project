@@ -6,6 +6,7 @@ class AttachmentUploader < CarrierWave::Uploader::Base
    end
    
    def extension_white_list
-      %w(pdf doc htm html docx png jpeg hwp)
+      %w(pdf doc htm html docx png jpeg hwp mp3) 
+      # png jpeg hwp mp3 확장자 추가 160508
    end
 end

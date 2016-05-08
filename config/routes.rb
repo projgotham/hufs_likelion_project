@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'resumes/index'
-
+  
   get 'resumes/new'
-
   get 'resumes/create'
-
   get 'resumes/destroy'
 
   root 'home#index'
@@ -13,4 +10,5 @@ Rails.application.routes.draw do
 
   resources :resumes, only: [:index, :new, :create, :destroy]
 
+  get '/resumes/index' => 'resumes#index'
 end

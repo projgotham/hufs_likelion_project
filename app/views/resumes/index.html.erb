@@ -4,34 +4,35 @@
       </div>
    <% end %>
    
-   <br />
-   
-   <%= link_to "지원하기", new_resume_path, class: "btn btn-primary" %>
-   <br />
-   <br />
-   
-   <table class = "table table-bordered table-striped">
-      <thead>
-         <tr>
-            <th>파일명</th>
-            <th>다운로드</th>
-            <th>날짜</th>
-            <th>삭제하기</th>
-         </tr>
-      </thead>
-      
-      <tbody>
-         <% @resumes.each do |resume| %>
-            
+   <div id="upload_files" style="overflow: auto"; "max-height: 40vh;">
+      <table class = "table table-bordered table-striped table-hover">
+         <thead>
             <tr>
-               <td><%= resume.name %></td>
-               <td><%= link_to "Download", resume.attachment_url %></td>
-               <td><%= resume.created_at.in_time_zone("Asia/Seoul").strftime("%Y-%m-%d %H:%M") %></td>
-               <td><%= button_to "Delete",  resume, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{resume.name}?" %></td>
+               <th>파일명</th>
+               <th>다운로드</th>
+               <th>날짜</th>
+               <th>삭제하기</th>
             </tr>
-            
-         <% end %>
-      </tbody>
-   </table>
-   <hr>
-   <a href="/">메인으로 가기</a>
+         </thead>
+         
+         <tbody>
+            <% @resumes.each do |resume| %>
+               
+               <tr>
+                  <td><%= resume.name %></td>
+                  <td><%= link_to "Download", resume.attachment_url %></td>
+                  <td><%= resume.created_at.in_time_zone("Asia/Seoul").strftime("%Y-%m-%d %H:%M") %></td>
+                  <td><%= button_to "Delete",  resume, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{resume.name}?" %></td>
+               </tr>
+               
+            <% end %>
+         </tbody>
+      </table>
+      <hr>
+   
+      <!--windows창 닫기-->
+      <%= link_to "Upload", new_resume_path, class: "btn btn-primary f.btn" %>
+      <a onclick="self.close()" class="btn btn-default f.btn">Cancel</a>
+   </div>
+   
+
