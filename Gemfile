@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'mailgun-ruby'
+
 gem 'will_paginate', '~> 3.1.0'
 gem 'devise'
 gem 'carrierwave', '~> 0.9'

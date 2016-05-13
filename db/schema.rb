@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20160505081532) do
   create_table "resumes", force: :cascade do |t|
     t.string   "name"
     t.string   "attachment"
+    t.string   "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

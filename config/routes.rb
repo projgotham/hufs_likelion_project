@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
 
-<<<<<<< HEAD
-  
-=======
-  devise_for :users
 
   get 'resumes/index'
->>>>>>> c69f9cfa861d9d518097c705716f744a6bbed617
+
   get 'resumes/new'
   get 'resumes/create'
   get 'resumes/destroy'
