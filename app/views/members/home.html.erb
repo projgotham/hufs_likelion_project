@@ -1,41 +1,34 @@
 <div class="container-fluid" style="margin-top: 40px; text-align: left;">
+<div class="col-md-1"></div>
+<div class="col-md-10">
 <ul>
+    <div style="text-align:right;">
     <% if user_signed_in? %>
-    <li><%= current_user.email %></li>
-    <li><a href="/users/sign_out" data-method="delete">로그아웃</a></li>
+    <%= current_user.email %> || <a href="/users/sign_out" data-method="delete">로그아웃</a>
     <% else %>
-    <li><a href="/users/sign_up">회원가입</a></li>
-    <li><a href="/users/sign_in">로그인</a></li>
+    <a href="/users/sign_up">회원가입</a> || <a href="/users/sign_in">로그인</a>
     <% end %>
+    </div>
 </ul>
 
 
-<%= form_tag "/members/post_write", method: "post", style: "text-align:left" do %>
-    <p>제목 : <input type="text" name="title"></p>
-    <p>내용 : <textarea name="content"></textarea></p>
-    <p><input type="submit" placeholder="작성"></p>
+<%= form_tag "/members/post_write", method: "post", style: "text-align:left;" do %>
+    <p><input type="text" name="title" placeholder="글제목" style="width:100%; text-align: left;"></p>
+    <p><textarea name="content" placeholder="글내용" style="width:100%; text-align: left;"></textarea></p>
+    <p><input type="submit" value="작성"></p>
 <% end %>
 
-
-<% @membersposts.each do |m| %>
-    작성자 : <%= m.user.email %><br>
-    제목 : <%= m.title %><br>
-    내용 : <%= m.content %><br>
-    <a href="/members/post_edit?id=<%= m.id %>">수정</a>
-    <a href="/members/post_destroy?id=<%= m.id %>">삭제</a>
-    
-    <%= form_tag "/members/comment_write", method: "post", style: "text-align:left" do %>
-        <input type="hidden" name="members_post_id" value="<%= m.id %>">
-        <input type="text" name="comment_content">
-        <input type="submit">
-    <% end %>
-    댓글
-    <% m.members_comments.each do |c| %>
-        <li><%= c.user.email %>: <%= c.comment_content %></li>
-    <% end %>
-<hr>
+<div class="list-group">
+<% @membersposts.each.with_index do |post,index| %>
+    <a href="/members/post_read/<%= post.id %>"><button type="button" class="list-group-item">
+      <b><%= post.user.email %></b> || <%= post.title %>
+      <span class="badge"><%= post.members_comments.count %></span><br>
+    </button></a>
 <% end %>
+</div>
 <%= will_paginate @membersposts %>
 
+</div>
+<div class="col-md-1"></div>
 </div>
 

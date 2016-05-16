@@ -1,9 +1,6 @@
-<h1>Edit</h1>
-edit post: <%= @memberspost.id %>
-
 <form action="/members/post_update" method="post">
+    <p>작성자 : <%= @memberspost.user.email %></p>
     <input type="hidden" name="id" value="<%= @memberspost.id %>">
-    <p>작성자 : <input type="text" name="writer" value="<%= @memberspost.writer %>"></p>
     <p>제목 : <input type="text" name="title" value="<%= @memberspost.title %>"></p>
     <p>내용 : <textarea name="content"><%= @memberspost.content %></textarea></p>
     <p><input type="submit" placeholder="작성"></p>

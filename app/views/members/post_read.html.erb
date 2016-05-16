@@ -1,0 +1,29 @@
+<div class="container-fluid" style="margin-top: 40px;">
+<div class="row">
+    <div class="col-md-1 col-xs-1"></div>
+    <div class="col-md-10 col-xs-10" style="text-align: left;">
+        <p><h4><%= @posts.title %></p></h4>
+        <p><%= @posts.content %></p>
+        <div style="text-align: right;">
+            <a href="/members/post_edit/<%= @posts.id %>">수정</a>
+            <a href="/members/post_destroy/<%= @posts.id %>">삭제</a>
+        </div>
+        
+        <hr>
+        
+        <form action="/members/comment_write/<%= @posts.id %>" method="post">
+            <div class="form-group">
+                <input type="text" class="form-control" name="comment_content" placeholder="댓글" style="width: 80%; height: 35px;">
+                <button type="submit" class="btn btn-default" style="margin:0;">댓글</button>
+            </div>
+        </form>
+        <div style="text-align: left;">
+        <% @posts.members_comments.each.with_index do |comment,index| %>
+            <p><b><%= comment.user.email %></b> || <%= comment.comment_content %></p>
+        <% end %>
+        </div>
+    </div>
+    <div class="col-md-1 col-xs-1"></div>
+</div>
+
+

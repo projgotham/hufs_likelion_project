@@ -1,8 +1,12 @@
 class MembersController < ApplicationController
   before_action :authenticate_user!, except: :home
-  
+
   def home
     @membersposts = MembersPost.paginate(:page => params[:page])
+  end
+  
+  def post_read
+    @posts = MembersPost.find(params[:id])
   end
   
   def post_write
@@ -26,7 +30,6 @@ class MembersController < ApplicationController
   
   def post_update
     mm = MembersPost.find(params[:id])
-    mm.writer = params[:writer]
     mm.title = params[:title]
     mm.content = params[:content]
     mm.save
@@ -34,7 +37,7 @@ class MembersController < ApplicationController
   end
   
   def comment_write
-    MembersComment.create(user_id: current_user.id, members_post_id: params[:members_post_id], comment_content: params[:comment_content])
-    redirect_to '/members/home'
+    MembersComment.create(user_id: current_user.id, members_post_id: params[:id], comment_content: params[:comment_content])
+    redirect_to :back
   end
 end
