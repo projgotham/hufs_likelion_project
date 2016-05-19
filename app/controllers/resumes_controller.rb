@@ -41,7 +41,7 @@ class ResumesController < ApplicationController
               
             redirect_to "/resumes/index", notice: "지원서 \"#{@resume.name}\"(이)가 업로드되었습니다.\r\n" + "지원 완료 메일을 확인해주세요."
       else
-         render "new"
+         render "/resumes/new"
       end
       
       # if @resume.save
@@ -60,7 +60,7 @@ class ResumesController < ApplicationController
    
    private
    def resume_params
-      params.require(:resume).permit(:name, :attachment)
+      params.require(:resume).permit(:name, :attachment, :email)
    end
    
 end

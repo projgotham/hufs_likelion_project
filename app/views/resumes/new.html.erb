@@ -11,18 +11,19 @@
 <% end %>
 
 <div class = "well">
+   <br>
    <%= form_for @resume, html: { multipart: true } do |f| %>
       <%= f.label :name %>
-      <%= f.text_field :name %> <br>
+      <%= f.text_field :name, :placeholder => "* required" %> <br>
       <%= "e.g. 한국외대_조민철_1402(핸드폰 뒷번호 4자리)"%><br><br>
       <%= f.label :email %>
-      <%= f.text_field :email %> <br>
+      <%= f.text_field :email, :placeholder => "* required" %> <br>
       <br>
       <%= f.label :attachment %>
  
          <%= f.file_field :attachment %>
       <hr>
       <%= f.submit "Save", class: "btn btn-primary" %>
-      <a href="/resumes" class="btn btn-default">Cancel</a>
+      <a href="/resumes" onclick="self.close()" class="btn btn-default">Cancel</a>
    <% end %>
 </div>

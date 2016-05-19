@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'resumes/new'
   get 'resumes/create'
   get 'resumes/destroy'
+  # post 'resumes' => 'resumes#new'
   post 'resumes/index'
 
   get '/members/home'
