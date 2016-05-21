@@ -13,11 +13,16 @@
 
       <link rel="stylesheet" href="assets/style.css">
       <link rel="stylesheet" href="assets/queries.css">
+      
+      <!--허진 modal 새로 적용하기 위해 css 참조 2016/05/21-->
+      <link rel="stylesheet" href="assets/remodal.css">
+      <link rel="stylesheet" href="assets/remodal-default-theme.css">
    </head>
    
    <body>
       <!--<%= flash[:alert] %><br>-->
       <%= yield %>
+      <script src="assets/remodal.js"></script>
       <script src="assets/script.js"></script>
       <script src="assets/jquery.waypoints.min.js"></script>
    </body>
