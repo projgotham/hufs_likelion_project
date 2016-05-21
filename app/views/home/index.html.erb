@@ -6,13 +6,18 @@ Created Date: 2016-04-30
     <nav>
         <div class="container-fluid">
             <div class="row">
-                <img src="assets/hufs_likelion_logo_final_small.png" class="logo">
-                <img src="assets/text_logo.png" class="logo-small">
+                <a href="#"><img src="assets/hufs_likelion_logo_final_small.png" class="logo"></a>
+                <a href="#"><img src="assets/text_logo.png" class="logo-small"></a>
                 <ul class="main-nav js--main-nav">
-                    <li><a href="#about">About Likelion</a></li>
-                    <li><a href="#members">Members</a></li>
+                    <li><a href="#section-about">About Likelion</a></li>
+                    <li><a href="#section-members">Members</a></li>
                     <li><a href="#section-review">Review</a></li>
                     <li><a href="#section-apply">Apply</a></li>
+                    <% if user_signed_in? %>
+                        <li><a href="/members/home"><span style="color:orange;">BOARDS</span></a>
+                    <% else %>
+                        <li><a href="/users/sign_in"><span style="color:orange;">LOGIN</span></a>
+                    <% end %>
                 </ul>
                 <a class="mobile-nav-icon js--nav-icon"><span class="glyphicon glyphicon-option-horizontal"
                                                               aria-hidden="true"></span>
@@ -23,7 +28,6 @@ Created Date: 2016-04-30
 
     <div class="main-text-box">
         <h1>외대 멋쟁이사자차럼</h1>
-        <h2><%= link_to '로그인', new_user_session_path %></h2>
     </div>
     
 </header>
@@ -49,12 +53,21 @@ Created Date: 2016-04-30
 <!--            </div>-->
 <!--            <div class="col-md-4">-->
                 <!-- <i class="ion-quote"></i> -->
+<<<<<<< HEAD
 <!--                <blockquote>-->
 <!--                    헤헷~ 저는 개발자에요~ 초급 개발자. 하하^^<br> 앞으로 잘 부탁드립니다!<br><br>-->
 <!--                </blockquote>-->
 <!--                <cite><img src="assets/myphoto.jpg" alt="Customer1">&nbsp;&nbsp;이민구</cite>-->
 <!--            </div>-->
 <!--            <div class="col-md-4">-->
+=======
+                <blockquote>
+                    헤헷~ 저는 개발자에요~ 초급 개발자. 하하^^<br> 앞으로 잘 부탁드립니다!<br><
+                </blockquote>
+                <cite><img src="assets/myphoto.jpg" alt="Customer1">&nbsp;&nbsp;이민구</cite>
+            </div>
+            <div class="col-md-4">
+>>>>>>> b3fd74cec0206c1e605a52ba9da1b9d1c6bb71bd
                 <!-- <i class="ion-quote"></i> -->
 <!--                <blockquote>-->
 <!--                    저는 엄청난 부귀영화를 포기하고, 개발자의 길을 걸으려 합니다. 그 막막한 시작을 멋사와 함께 할 수 있어 다행이네요.-->
@@ -67,7 +80,7 @@ Created Date: 2016-04-30
 <!--<hr>-->
 <!-- 여기부터는 ABOUT : 외대 멋사는 어떻게 만들어졌으며 어떤 사람들로 이뤄졌는지, 어떤 것을 지향하는지 -->
 
-<section class="section-features js--section-features" id="features">
+<section class="section-about js--section-features" id="section-about">
     <div class="container-fluid">
           <div class="row">
             <div class = "section-header" style = "background-image :url(https://t2.daumcdn.net/thumb/R1280x0/?fname=http://t2.daumcdn.net/brunch/service/user/2VX/image/FSCwGb3ugPdqyKjGeDOc4Yk99M8); linear-gradient(to bottom right, rgba(0,0,0,0.8),rgba(0,0,0,0.2))"> 
@@ -351,7 +364,7 @@ Created Date: 2016-04-30
 Created by: Kim Jeong Taek
 Created Date: 2016-04-30
 -->
-<section class="section-review">
+<section class="section-review" id="section-review">
 
     <div class="container-fluid" style="text-align:center">
         <div class="row" style="text-align:center">  

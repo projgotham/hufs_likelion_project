@@ -1,0 +1,141 @@
+[33mcommit 986db131d53640d9d6974c6a166aa28b786c895a[m
+Author: heojin <l3estttt@gmail.com>
+Date:   Sat May 21 11:33:04 2016 +0000
+
+    by Heo jin, grid
+
+[33mcommit d89cf7af1cc275f47f665dbd4bb29410a78cd614[m
+Author: heojin <l3estttt@gmail.com>
+Date:   Sat May 21 09:12:15 2016 +0000
+
+    2016/5/21 by Heojin remodal
+
+[33mcommit 06155e23c92596d606c1fa8c1952f0c6a99aa54c[m
+Author: Heojin <l3estttt@gamil.com>
+Date:   Sat May 21 06:06:00 2016 +0000
+
+    2016/05/21 by Heojin
+
+[33mcommit 0d7e1942ac195e76e4c37d0d895cede913e760bc[m
+Author: datalater <the7mincheol@gmail.com>
+Date:   Thu May 19 07:24:07 2016 +0000
+
+    jmc_0519
+
+[33mcommit 067d2e1d234e4bf051e7616abd66711612f7548b[m
+Author: Jinho Hyeon <neverlish@gmail.com>
+Date:   Mon May 16 13:17:12 2016 +0000
+
+    20160516 jinho - fixed board
+
+[33mcommit 298cef3ec9054e62e3bf7043cd9bc71bd46deac3[m
+Author: datalater <the7mincheol@gmail.com>
+Date:   Fri May 13 07:46:41 2016 +0000
+
+    jmc_0513_mailgun_ing2
+
+[33mcommit 6d3ac79ca9d052e902fd126fd2b27857d8c8dc5d[m
+Merge: 7f11a75 936cb94
+Author: datalater <the7mincheol@gmail.com>
+Date:   Fri May 13 07:33:52 2016 +0000
+
+    jmc_0513_mailgun_ing
+
+[33mcommit 7f11a753a00ce29b788dffcdc80c0fc0436d1589[m
+Author: datalater <the7mincheol@gmail.com>
+Date:   Fri May 13 07:31:45 2016 +0000
+
+    jmc_0513_mailgun_ing
+
+[33mcommit 936cb949ce11ca3c75763876d5fcf43856cdb659[m
+Author: heojin <l3estttt@gmail.com>
+Date:   Tue May 10 03:51:16 2016 +0000
+
+    commit by Heojin 2016/5/10
+
+[33mcommit 72236906d8f7db688c0eb34edbe3888bda5c07bb[m
+Merge: 38c6201 c69f9cf
+Author: datalater <the7mincheol@gmail.com>
+Date:   Sun May 8 15:32:46 2016 +0000
+
+    jmc_160508_target_ver03
+
+[33mcommit 38c6201476fb511d37e7be91b6427709ac1be1e8[m
+Author: datalater <the7mincheol@gmail.com>
+Date:   Sun May 8 15:31:33 2016 +0000
+
+    160508_target_ver03
+
+[33mcommit c69f9cfa861d9d518097c705716f744a6bbed617[m
+Author: Jinho Hyeon <neverlish@gmail.com>
+Date:   Thu May 5 10:43:52 2016 +0000
+
+    jinho 20160505
+
+[33mcommit 4645ba372cbe197298c33dd6b83386fe3ff55dea[m
+Author: datalater <the7mincheol@gmail.com>
+Date:   Wed May 4 06:55:44 2016 +0000
+
+    filename_extension_png.jpeg
+
+[33mcommit c0f09de4faedb9e2830d2f96a82e261a45ddecd0[m
+Author: datalater <the7mincheol@gmail.com>
+Date:   Tue May 3 10:27:04 2016 +0000
+
+    mingu 20160503
+
+[33mcommit 7478e5034e0c4631b8a29aaac2760c2893ac29f5[m
+Author: datalater <the7mincheol@gmail.com>
+Date:   Sun May 1 14:55:36 2016 +0000
+
+    bug fixes
+
+[33mcommit 8bcc28bccde6c2018bcad697b1215ca76ec080b4[m
+Author: datalater <the7mincheol@gmail.com>
+Date:   Sun May 1 14:48:20 2016 +0000
+
+    init commit finish
+
+[33mcommit cdfdabd27a605f184f9d0dee960016e5423eeeca[m
+Merge: 80d1816 d6c74bf
+Author: datalater <the7mincheol@gmail.com>
+Date:   Sat Apr 30 09:58:59 2016 +0000
+
+    mincheol
+
+[33mcommit 80d181672895100230e9d2f09d57c97f8be76f04[m
+Author: datalater <the7mincheol@gmail.com>
+Date:   Sat Apr 30 09:54:56 2016 +0000
+
+    mincheol
+
+[33mcommit d6c74bfd9d5adadd84b1f211ba311ffef16ecc26[m
+Merge: b3b998b 15f1b7f
+Author: Jinho Hyeon <neverlish@gmail.com>
+Date:   Sat Apr 30 09:34:57 2016 +0000
+
+    jinho
+
+[33mcommit b3b998baa6883f55857735f55f37cf8fa64d2d43[m
+Author: Jinho Hyeon <neverlish@gmail.com>
+Date:   Sat Apr 30 09:24:59 2016 +0000
+
+    jinho
+
+[33mcommit 15f1b7fe27cd70d829c213f32b8031c57d2b7627[m
+Author: rotorldi <chun_93@naver.com>
+Date:   Sat Apr 30 09:16:25 2016 +0000
+
+    SungJin
+
+[33mcommit 368ba096807177735be5a347f54b2a48c9f6b2b6[m
+Author: projgotham <projgotham@naver.com>
+Date:   Sat Apr 30 04:37:02 2016 +0000
+
+    example is connected
+
+[33mcommit 6e0685345a96792be6f7a55a7c403c60d9e32f79[m
+Author: projgotham <projgotham@naver.com>
+Date:   Sat Apr 30 04:34:40 2016 +0000
+
+    init

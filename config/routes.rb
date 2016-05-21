@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   post 'resumes/index'
 
   get '/members/home'
-  post '/members/post_write'
+  get '/members/post_write'
+  post '/members/post_write_process'
   get '/members/post_destroy/:id' => 'members#post_destroy'
   get '/members/post_edit/:id' => 'members#post_edit'
   get '/members/post_read/:id' => 'members#post_read'

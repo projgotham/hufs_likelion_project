@@ -2,7 +2,14 @@ class MembersController < ApplicationController
   before_action :authenticate_user!, except: :home
 
   def home
-    @membersposts = MembersPost.paginate(:page => params[:page])
+    @membersposts = MembersPost.paginate(:page => params[:page]).order('id DESC')
+    if params[:page].nil? 
+      @page = 1
+    else
+      @page = params[:page].to_i
+    end
+    
+    
   end
   
   def post_read
@@ -10,6 +17,9 @@ class MembersController < ApplicationController
   end
   
   def post_write
+  end
+  
+  def post_write_process
     m = MembersPost.new
     m.user_id = current_user.id
     m.title = params[:title]
