@@ -1,0 +1,23 @@
+<nav>
+    <div class="container-fluid">
+        <div class="row member-main-nav-bar">
+            
+            <img src="/assets/text_logo.png" class="member-logo">
+            <ul class="member-main-nav js--main-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/members/home">Board</a></li>
+                <% if user_signed_in? %>
+                    <li><a href="/users/sign_out" data-method="delete">Log-out</a></li>
+                    <li><%= current_user.email %></li>
+                <% else %>
+                    <li><a href="/users/sign_in">Log-in</a></li>
+                    <li><a href="/users/sign_up">Registration</a></li>
+                <% end %>
+                
+            </ul>
+            <a class="mobile-nav-icon js--nav-icon"><span class="glyphicon glyphicon-option-horizontal"
+                                                          aria-hidden="true"></span>
+            </a>
+        </div>
+    </div>
+</nav>

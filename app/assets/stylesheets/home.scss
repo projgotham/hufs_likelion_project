@@ -8,3 +8,366 @@
     box-sizing: border-box;
     text-align: center;
 }
+
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+/**{*/
+/*    margin:0;*/
+/*    padding:0;*/
+/*    box-sizing: border-box;*/
+/*    text-align: center;*/
+/*}*/
+
+/* HEADER */
+
+.text_sub{
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.image-margin{
+    text-align: center;
+    margin-top : 10px;
+    margin-bottom: 10px;
+    
+}
+
+.col-sm-12{
+    margin-top: 40px;
+}
+
+.about-text {
+    color: #555;
+    letter-spacing: -2px;
+}
+
+.header-letter {
+    font-size: 32px;
+}
+
+.section-header {
+    display: table;
+    position: relative;
+    color: #fff;
+    width: 100%;
+    height: 180px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+}
+
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+header {
+    background-image: linear-gradient(to bottom right, rgba(0,0,0,0.8),rgba(0,0,0,0.2)), url("https://i.ytimg.com/vi/5nCPameVdaQ/maxresdefault.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+    vertical-align: middle;
+}
+
+.main-text-box {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+section {
+    margin: 30px 0 0 0;
+    padding: 0;
+    display: block;
+}
+
+/* ------------------ */
+/* REUSABLE COMPONENT */
+/* ------------------ */
+
+/* LOGO */
+
+.logo {
+    width: 100px;
+    height: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.logo-small {
+    height: 50px;
+    width: auto;
+    display: none;
+    float: left;
+}
+
+
+/* MAIN NAV */ 
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 45px;
+    padding: 0 20px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link, .main-nav li a:visited {
+    padding: 8px 0;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover, .main-nav li a:active {
+    border-bottom: 2px solid #e67e22;
+}
+
+
+/* Mobile navi */
+
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon span {
+    font-size: 150%;
+    color: #fff;
+}
+
+/* Sticky navi */ 
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 9999;
+}
+
+.sticky .main-nav { margin-top: 13px; }
+
+.sticky .main-nav li a:link, .sticky .main-nav li a:visited {
+    padding: 16px 0;
+    color: #555;
+}
+
+.sticky .logo { display: none; }
+.sticky .logo-small { display: block; height: 20px; margin-top: 13px; }
+/* ------------------------------------ */
+/* MEALS */
+/* ------------------------------------ */
+.section-meals {
+    padding: 0;
+}
+
+.meals-showcase {
+    list-style: none;
+    width: 100%;
+}
+    
+.meals-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.p-showcase {
+    display: block;
+    font-size: 19px;
+    float:left;
+}
+.p{
+    display:block;
+}
+.meal-photo {
+    width:100%;
+    margin: 0;
+    height:100%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.meal-photo img{
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover {
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+.p:hover {
+  font-size: 10px;  
+}
+
+h2 {
+    font-size: 200%;
+    word-spacing: 2px;
+    text-align:center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: "";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+    text-align:center;
+}
+
+/*background-color: rgb(20,110,122);*/
+
+/*
+ * Created By: Cho MinCheol
+ */
+.apply-box {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(http://viewpds.jihak.co.kr/dpup/01univlesson/0703-044.jpg);
+    background-size: cover;
+    background-position:center;
+    border: 1px solid black;
+    height: 30vh;
+    position: relative;
+    text-align: center;
+}
+
+.apply-text {
+    margin-top: 30px;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}
+
+.apply-file {
+    margin-top: 40px;
+}
+    /* input[type=file] 주석처리에서 기능 작동으로 수정 160506(금)*/
+input[type=file] {
+    margin: 0 auto;
+}
+
+.apply_button {
+    clear: both;
+}
+
+/*input[type=file] {*/
+/*    background: none repeat scroll 0 0 #66A3D2;*/
+/*    border-color: #FFFFFF #327CB5 #327CB5 #FFFFFF;*/
+/*    border-radius: 10px 10px 10px 10px;*/
+/*    border-style: solid;*/
+/*    border-width: 1px;*/
+/*    box-shadow: 1px 1px 3px #333333;*/
+/*    color: #FFFFFF;*/
+/*    cursor: pointer;*/
+/*    font-weight: bold;*/
+/*    padding: 5px;*/
+/*    text-align: center;*/
+/*    text-shadow: 1px 1px 1px #000000;*/
+/*}*/
+
+footer {
+    margin-top: 20px;
+}
+
+footer img {
+    width: 18px;
+    margin-bottom: 3px;
+}
+
+
+
+/*
+ * Created by: Jung Taek
+ */
+ 
+.logo-round {
+    border-radius: 80px;
+    width:230px;
+}
+
+.row1 {
+    border-bottom: 3px solid ;
+    border-bottom-color: #FF9702 ;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+
+.modal-content{
+    text-align:center;
+    width:500px;
+    margin-top: 50vh;
+    margin-left: 50vh;
+}
+
+/*
+ * Created by: Heo Jin
+ */
+
+
+html,
+body {
+    background-color: #fff;
+    color: #555555;
+    font-family: 'Lato', 'Arial', 'sans-serif';
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+
+
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.carousel-inner {
+    height: 700px;
+}
+
+.carousel-inner img {
+    width: 100%;
+    overflow: hidden;
+}

@@ -1,7 +1,16 @@
-<form action="/members/post_update" method="post">
-    <p>작성자 : <%= @memberspost.user.email %></p>
-    <input type="hidden" name="id" value="<%= @memberspost.id %>">
-    <p>제목 : <input type="text" name="title" value="<%= @memberspost.title %>"></p>
-    <p>내용 : <textarea name="content"><%= @memberspost.content %></textarea></p>
-    <p><input type="submit" placeholder="작성"></p>
-</form>
+<%= render partial: "shared/member_menu" %>
+
+<div class="container-fluid" style="margin-top: 40px;">
+<div class="row">
+    <div class="col-md-1 col-xs-1"></div>
+    <div class="col-md-10 col-xs-10" style="text-align: left;">
+        <%= form_tag "/members/post_update", method: "post" do %>
+            <p style="text-align: left;">작성자 : <%= @memberspost.user.email %></p>
+            <input type="hidden" name="id" value="<%= @memberspost.id %>">
+            <p><textarea name="title" style="width:100%; text-align: left;" rows="1"><%= @memberspost.title %></textarea></p>
+            <p><textarea name="content" style="width:100%; text-align: left;"><%= @memberspost.content %></textarea></p>
+            <p><input type="submit" value="작성"></p>
+        <% end %>
+     </div>
+    <div class="col-md-1 col-xs-1"></div>
+</div>

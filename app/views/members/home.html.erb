@@ -1,34 +1,60 @@
+<%= render partial: "shared/member_menu" %>
+
 <div class="container-fluid" style="margin-top: 40px; text-align: left;">
 <div class="col-md-1"></div>
 <div class="col-md-10">
-<ul>
-    <div style="text-align:right;">
-    <% if user_signed_in? %>
-    <%= current_user.email %> || <a href="/users/sign_out" data-method="delete">로그아웃</a>
-    <% else %>
-    <a href="/users/sign_up">회원가입</a> || <a href="/users/sign_in">로그인</a>
+
+    <table class="table table-hover">
+    <thead>
+        <colgroup>
+            <col width="3%"><col width="70%"><col width="13%"><col width="14%">
+        </colgroup>
+        <tr>
+            <th>#</th>
+            <th>글제목</th>
+            <th>작성자</th>
+            <th>작성시간</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% @membersposts.each.with_index do |post,index| %>
+        <tr>
+            <td><%= ((@page - 1) * 5) + (index +1)  %></td>
+            <td><a href="/members/post_read/<%= post.id %>"><%= post.title %> [<%= post.members_comments.count %>]</a></td>
+            <td><%= post.user.email %></td>
+            
+            <% @time = time_ago_in_words(post.created_at) 
+            @time_array = @time.split()
+            @time_array_indicator = @time_array.count();
+            if @time == "less than a minute"
+                @current_time = "방금 전"
+            elsif @time_array_indicator == 2
+                @current_time = @time_array[0] + " 분 전"
+            elsif @time_array_indicator == 3
+                if @time_array[2] == "hour" or @time_array[2] == "hours"
+                    @current_time = @time_array[1] + " 시간 전"
+                elsif @time_array[2] == "day" or @time_array[2] == "days"
+                    @current_time = @time_array[1] + "  일 전"
+                elsif @time_array[2] == "month" or @time_array[2] == "months"
+                    @current_time = @time_array[1] + "  개월 전"
+                elsif @time_array[2] == "year" or @time_array[2] == "years"
+                    @current_time = @time_array[1] + "  년 전"
+                end
+            else
+                @current_time = "An Error Occurred"
+            end %>
+            
+            <td><%= @current_time %></td>
+        </tr>
     <% end %>
+    </tbody>
+    </table>
+    
+    <%= will_paginate @membersposts %>
+
+    <div style="float:right;">
+        <a href="/members/post_write"><button type="button" class="btn btn-default">쓰기</button></a>
     </div>
-</ul>
-
-
-<%= form_tag "/members/post_write", method: "post", style: "text-align:left;" do %>
-    <p><input type="text" name="title" placeholder="글제목" style="width:100%; text-align: left;"></p>
-    <p><textarea name="content" placeholder="글내용" style="width:100%; text-align: left;"></textarea></p>
-    <p><input type="submit" value="작성"></p>
-<% end %>
-
-<div class="list-group">
-<% @membersposts.each.with_index do |post,index| %>
-    <a href="/members/post_read/<%= post.id %>"><button type="button" class="list-group-item">
-      <b><%= post.user.email %></b> || <%= post.title %>
-      <span class="badge"><%= post.members_comments.count %></span><br>
-    </button></a>
-<% end %>
-</div>
-<%= will_paginate @membersposts %>
-
 </div>
 <div class="col-md-1"></div>
 </div>
-
