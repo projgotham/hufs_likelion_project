@@ -9,6 +9,17 @@
 
 /* HEADER */
 
+
+#portfolio .portfolio-item .portfolio-caption {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  text-align: center;
+  padding: 25px;
+}
+.bg-light-gray {
+  background-color: #f7f7f7;
+}
 .text_sub{
     text-align: center;
     margin-left: 10px;
@@ -357,4 +368,10 @@ body {
 .carousel-inner img {
     width: 100%;
     overflow: hidden;
+}
+
+.img-story {
+    height: 300px;
+    width: 200px;
+    background-position: center;
 }
